@@ -32,6 +32,7 @@ const unknownEndpoint = (request, response) => {
 app.use(cors())
 app.use(express.json())
 app.use(requestLogger)
+app.use(express.static('build'))
 const generateId = () => {
   const maxId = notes.length > 0
     ? Math.max(...notes.map(n => n.id))

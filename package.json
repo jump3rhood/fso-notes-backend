@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "build:ui": "rm -rf build && cd ../notes/ && npm run build && cp -r build ../notes-backend/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "John Manohar",
